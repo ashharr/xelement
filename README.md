@@ -77,6 +77,9 @@ xelement/
 The extension popup provides a clean, organized table of detected input fields.
 
 ![Popup Interface](docs/screenshots/popup.png)
+<br>
+![Popup Interface](docs/screenshots/export.png)
+
 
 ### Exported CSV
 The exported CSV file includes all essential details, ready for use in testing and analysis.
