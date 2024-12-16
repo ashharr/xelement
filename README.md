@@ -1,5 +1,8 @@
 # XElement: Input Field Detector for Webpages
 
+![Exported CSV](docs/xelement-gif.gif)
+
+
 **XElement** is a Chrome extension that scans any webpage for input fields (`<input>`, `<textarea>`, `<select>`) and exports their details into a CSV file. It is an essential tool for **software testers**, **QA engineers**, and **web developers** for validating form elements and maintaining detailed records.
 
 ---
