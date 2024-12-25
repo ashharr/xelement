@@ -12,7 +12,7 @@
 - **Automatic Field Detection**: Identifies all input fields (text boxes, dropdowns, and text areas) on a webpage.
 - **Detailed Information**: Captures essential data such as the field's **type**, **XPath**, and **name**.
 - **CSV Export**: Saves the detected fields into a CSV file for further analysis and documentation.
-
+- **Automation testing of UI elements**: This feature tests the UI element available on any webpage using the locator value extracted.
 ---
 
 ## Installation
