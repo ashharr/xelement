@@ -1,12 +1,35 @@
 // Detect input fields and generate data
 function detectInputFields() {
     const fields = [];
-    const inputElements = document.querySelectorAll('input, textarea, select');
+    const elements = document.querySelectorAll('input, textarea, select, button, a[href]');
 
-    inputElements.forEach(el => {
+    elements.forEach(el => {
         const tagName = el.tagName.toLowerCase();
-        const type = el.type || 'select'; // type is not applicable for select
-        const name = el.name || '';
+        let type = '';
+        let name = '';
+        
+        // Detect input, textarea, select types
+        if (tagName === 'input') {
+            type = el.type || 'text';
+            name = el.name || '';
+        } else if (tagName === 'textarea') {
+            type = 'textarea';
+            name = el.name || '';
+        } else if (tagName === 'select') {
+            type = 'select';
+            name = el.name || '';
+        } 
+        // For button elements
+        else if (tagName === 'button') {
+            type = 'button';
+            name = el.name || '';
+        }
+        // For <a> elements with href
+        else if (tagName === 'a' && el.hasAttribute('href')) {
+            type = 'link';
+            name = el.href || '';
+        }
+
         const xpath = generateXPath(el);
 
         fields.push({

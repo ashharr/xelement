@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Form Field Detector",
+    "name": "XElement",
     "version": "1.0",
     "permissions": [
       "activeTab"
