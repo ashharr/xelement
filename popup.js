@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            // console.log('Fields received:', fields); 
+
             // Populate the table with detected fields
             const tableBody = document.getElementById('fieldsTable').getElementsByTagName('tbody')[0];
             tableBody.innerHTML = ''; // Clear existing rows
@@ -29,8 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Function to export data to CSV
 function exportCSV(fields) {
+    
+    // console.log('Fields before CSV export:', fields); // Log the fields to ensure they are passed correctly
+
     const header = ['Type', 'XPath', 'Name'];
-    const rows = fields.map(field => [field.type, field.xpath, field.name]);
+    const rows = fields.map(field => [
+        field.type,               // Type (button, link, input, etc.)
+        field.xpath,              // XPath
+        field.name || '(Unnamed)' // Fallback to '(Unnamed)' if no name is found
+    ]);
 
     let csvContent = "data:text/csv;charset=utf-8," + header.join(",") + "\n";
     rows.forEach(row => {
@@ -44,3 +53,4 @@ function exportCSV(fields) {
     document.body.appendChild(link);
     link.click();
 }
+
