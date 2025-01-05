@@ -2,50 +2,38 @@
 <html>
 <head>
     <title>XElement</title>
-    <style>
-        body {
-            width: 600px;
-            padding: 10px;
-            font-family: Arial, sans-serif;
-        }
-        button {
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        .table-wrapper {
-            overflow-x: auto;
-        }
-        table {
-            width: 1000px; /* Fixed width to enable horizontal scrolling */
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-    </style>
+    <!-- Include Pico.css -->
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <link rel="stylesheet" href="popup.css">
+
 </head>
 <body>
-    <h3>XElement - Xpath Copy and Xport</h3>
-    <div class="table-wrapper">
-        <table id="fieldsTable">
-            <thead>
-                <tr>
-                    <th>Type</th>
-                    <th>XPath</th>
-                    <th>Name</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </div>
-    <br>
-    <br>
-    <button id="exportButton">Export to CSV</button>
+    <main>
+        <div class="logo-container">
+            <!-- XElement Logo -->
+            <img src="icons/icon.png" alt="XElement Logo">
+            <h3>XElement</h3>
+            <div class="gif-container">
+                <img src="icons/anim.gif" alt="Loading Animation" class="gif-animation">
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="fieldsTable">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>XPath</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <button id="exportButton" class="primary"> Export to CSV</button>
+    </main>
     <script src="popup.js"></script>
 </body>
 </html>

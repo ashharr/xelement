@@ -1,9 +1,9 @@
 {
-    "manifest_version": 3,
+    "manifest_version": 4,
     "name": "XElement",
-    "version": "1.0",
+    "version": "1.1",
     "permissions": [
-      "activeTab"
+      "activeTab", "scripting"
     ],
     "background": {
       "service_worker": "background.js"
@@ -15,7 +15,8 @@
       }
     ],
     "action": {
-      "default_popup": "popup.html"
+      "default_popup": "popup.html",
+      "default_icon": "icons/icon.png"
     },
     "icons": {
       "48": "icons/icon.png"

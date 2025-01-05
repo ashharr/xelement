@@ -1,0 +1,119 @@
+/* Ensure smooth styling without conflicts */
+body {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 10px; /* Rounded edges for popup */
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+/* Container for logo and heading */
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Center logo and text vertically */
+    margin-bottom: 1rem;
+}
+
+.logo-container img {
+    width: 45px;
+    height: 45px;
+    margin-left: 1%;
+    margin-right: 5%;
+    vertical-align: middle;
+    transition: filter 0.9s ease; /* Smooth transition for theme change */
+}
+
+.logo-container h3 {
+    margin-left: 50%;
+    margin: 0; /* Remove default margin for proper alignment */
+    line-height: 1.1; /* Adjust line height for better alignment */
+}
+
+/* GIF animation container */
+.gif-container img {
+    width: 500px;
+    height: 100px;
+    margin-left: 25%;
+    transition: filter 0.3s ease;
+}
+
+/* Properly invert logo in dark mode */
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background: #070f18;
+        color: #E0E1DD; /* Adjust text color for contrast */
+    }
+
+    .logo-container img {
+        filter: invert(1) hue-rotate(180deg); /* Ensure proper inversion */
+    }
+
+    /* Invert the GIF colors in dark mode */
+    .gif-container img {
+        filter: invert(1);
+    }
+}
+
+
+.table-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    margin-top: 1rem;
+    border: 1px solid #E0E1DD; /* Border around table container */
+    border-radius: 8px; /* Rounded corners for the container */
+}
+
+table {
+    width: 100%; /* Allow table to take up full width */
+    min-width: 1000px; /* Maintain a fixed minimum width for horizontal scrolling */
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left; /* Left align text */
+    padding: 8px 12px; /* Add padding for better readability */
+    border-bottom: 1px solid #E0E1DD; /* Add borders between rows */
+}
+
+th {
+    font-weight: bold; /* Make headers bold */
+    background: #E0E1DD; /* Light gray background for the header */
+    color: #0D1B2A;
+}
+
+tbody tr:nth-child(odd) {
+    background: #E0E1DD; /* Alternate row coloring */
+}
+
+tbody tr:hover {
+    background: #E0E1DD; /* Highlight row on hover */
+}
+
+/* Button styling */
+button.primary {
+    display: block;
+    margin-left: 1rem; /* Center button below the table */
+    padding: 0.8rem 1.5rem; /* Add padding for a comfortable click area */
+    background-color: #415A77; /* Primary button color */
+    color: #E0E1DD;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Consistent font size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 2px 4px #0D1B2A;
+}
+
+button.primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    box-shadow: 0px 4px 8px #0D1B2A; /* Enhanced shadow on hover */
+}
+
+button.primary:active {
+    background-color: #003f7f; /* Even darker shade on click */
+    box-shadow: 0px 2px 4px #0D1B2A; /* Reset shadow on active */
+}
