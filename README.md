@@ -2,7 +2,6 @@
 
 ![Exported CSV](docs/xelement-gif.gif)
 
-
 **XElement** is a Chrome extension that scans any webpage for input fields (`<input>`, `<textarea>`, `<select>`) and exports their details into a CSV file. It is an essential tool for **software testers**, **QA engineers**, and **web developers** for validating form elements and maintaining detailed records.
 
 ---
@@ -13,13 +12,14 @@
 - **Detailed Information**: Captures essential data such as the field's **type**, **XPath**, and **name**.
 - **CSV Export**: Saves the detected fields into a CSV file for further analysis and documentation.
 - **Automation testing of UI elements**: This feature tests the UI element available on any webpage using the locator value extracted.
+
 ---
 
 ## Installation
 
 1. **Clone or Download the Project**:
    ```bash
-   git clone https://github.com/your-repo/xelement.git
+   git clone https://github.com/[your-repo]/xelement.git
    ```
 2. **Load the Extension**:
    - Open [Chrome Extensions Page](chrome://extensions/).
@@ -77,14 +77,15 @@ xelement/
 ## Screenshots
 
 ### Popup Interface
+
 The extension popup provides a clean, organized table of detected input fields.
 
 ![Popup Interface](docs/screenshots/popup.png)
 <br>
 ![Popup Interface](docs/screenshots/export.png)
 
-
 ### Exported CSV
+
 The exported CSV file includes all essential details, ready for use in testing and analysis.
 
 ![Exported CSV](docs/screenshots/csv.png)
@@ -94,6 +95,7 @@ The exported CSV file includes all essential details, ready for use in testing a
 ## Contributions
 
 We welcome contributions to improve **XElement**. To contribute:
+
 1. Fork this repository.
 2. Create a new branch for your feature or bug fix.
 3. Submit a pull request with detailed explanations.
@@ -119,4 +121,4 @@ For questions, issues, or feature requests, please open an issue on GitHub or re
 
 **XElement** makes form field detection seamless for testing professionals—download and simplify your workflow today!
 
---- 
+---
