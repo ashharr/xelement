@@ -117,3 +117,12 @@ button.primary:active {
     background-color: #003f7f; /* Even darker shade on click */
     box-shadow: 0px 2px 4px #0D1B2A; /* Reset shadow on active */
 }
+.small-btn {
+    font-size: 12px;
+    padding: 2px 6px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.copy-xpath-btn{
+    background-color: rgb(60, 153, 122);
+}
